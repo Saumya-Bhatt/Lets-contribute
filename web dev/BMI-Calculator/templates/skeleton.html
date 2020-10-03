@@ -7,6 +7,7 @@
     <link href="{{ url_for('static',filename='halfmoon-1.1.0/css/halfmoon-variables.min.css') }}" rel="stylesheet" />
     <link rel="stylesheet" href="{{ url_for('static',filename='style.css') }}">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&family=Teko:wght@600&family=Anton&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='bmi.svg') }}">
 </head>
 <body>
 
@@ -16,16 +17,25 @@
         <!-- Navbar (immediate child of the page wrapper) -->
         <nav class="navbar">
             <div class="container container-fluid">
-                <a href="{{ url_for('home_page') }}" class="navbar-brand brand_name">
+                <a href="{{ url_for('home_page') }}" style="color: whitesmoke;" class="navbar-brand brand_name">
                     <!--<img src="..." alt="...">-->
                     BMI Calculator
                 </a>
-                <!-- Navbar form (inline form) -->
+                <ul class="navbar-nav d-none d-md-flex"> <!-- d-none = display: none, d-md-flex = display: flex on medium screens and up (width > 768px) -->
+                    <li class="nav-item active">
+                        <a href="{{ url_for('resources') }}" class="nav-link">Resources</a>
+                    </li>
+                    <li class="nav-item active">
+                        <a href="{{ url_for('about') }}" class="nav-link">About</a>
+                    </li>
+                </ul>
 
+                <!-- Navbar form (inline form) -->
                 <div class="custom-switch form-inline d-none d-md-flex ml-auto">
                     <input type="checkbox" id="switch-2" value="" onclick="toggleDemo()">
                     <label for="switch-2">Night mode</label>
                 </div>
+
                 <!-- Navbar content (with the dropdown menu) -->
                 <div class="navbar-content d-md-none ml-auto"> <!-- d-md-none = display: none on medium screens and up (width > 768px), ml-auto = margin-left: auto -->
                     <!--<button class="btn btn-primary" type="button" onclick="toggleDemo()">Night mode</button>-->

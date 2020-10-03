@@ -12,7 +12,7 @@ h2 {
     font-size: 2em;
 }
 .start_info {
-    margin-top: 150px;
+    margin-top: 120px;
     margin-bottom: 50px;
 }
 .calculate {
@@ -48,6 +48,33 @@ h2 {
     font-weight: bold;
     font-size: 1.5em;
 }
+.picture {
+    width: auto;
+    height: 200px;
+}
+.navbar {
+    background-color: #242424;
+    color: whitesmoke;
+}
+.card {
+    background-color: whitesmoke;
+}
+.box {
+    display: flex;
+}
+.info {
+    margin: 0px 50px;
+}
+.poster {
+    width: 100%;
+    height: auto;
+}
+.credits {
+    display: flex;
+}
+.credits > p {
+    margin: 0px 30px 50px;
+}
 
 @media only screen and (max-width: 600px) {
     body {
@@ -58,5 +85,17 @@ h2 {
     }
     .start_info {
         margin-top: 30px;
+    }
+    .box {
+        display: inline;
+    }
+    .info {
+        margin: 10px 30px;
+    }
+    .calculate {
+        margin-bottom: 40px;
+    }
+    .credits {
+        display: inline;
     }
 }
